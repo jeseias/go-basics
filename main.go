@@ -19,8 +19,9 @@ func promptOptions(b Bill) {
       promptOptions(b)
   case "t":
     askForTip(&b, r)
-  case "":
-    log("Tip was saved with success")
+    promptOptions(b)
+  case "s":
+    b.save()
   default:  
     log("That was an invalid option")
     promptOptions(b)

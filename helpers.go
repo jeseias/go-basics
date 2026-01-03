@@ -11,7 +11,6 @@ func log(value string) {
 }
 
 func getInput(prompt string, r *bufio.Reader) (string, error) {
-  newLine()
   fmt.Print(prompt)
   input, err := r.ReadString('\n')
   return strings.TrimSpace(input), err

@@ -6,6 +6,7 @@ import (
 )
 
 func askForTip(b *Bill, r *bufio.Reader) {
+  newLine()
   input, _ := getInput("How much tip", r)
 
   p, err := strconv.ParseFloat(input, 64)
@@ -19,6 +20,7 @@ func askForTip(b *Bill, r *bufio.Reader) {
 }
 
 func askForItem(b *Bill, r *bufio.Reader) {
+  newLine()
   name, _ := getInput("What is the item name? ", r)   
   price, _ := getInput("What is the item price? ", r)
   
